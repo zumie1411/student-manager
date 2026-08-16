@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1> Student Task Manager</h1>
+            <p>Organize your studies, one task at a time efficiently.</p>
+        </header>
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+
+        </section>
+
+        <section class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <input type="text" id="task-input" placeholder="Enter your task...">
+
+            <select id="subject-input">
+                <option value="">Select Subject</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Python">Python</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="DBMS">DBMS</option>
+                <option value="AI/ML/DS">AI/ML/DS</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" id="deadline-input">
+
+            <select id="priority-input">
+                <option value="">Select Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <button id="add-task-btn">+ Add Task</button>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <h2>My Tasks</h2>
+
+            <div id="task-list">
+                <!-- Tasks will appear here -->
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
