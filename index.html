@@ -6,6 +6,7 @@
     <title>StudyFlow | Student Productivity</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="topbar">
@@ -35,13 +36,18 @@
             <h2>Plan your work. <span>Focus deeply.</span></h2>
             <p>Stay organized, complete your tasks and build your study streak.</p>
         </div>
+
         <div class="date-box">
             <span id="currentDay">Today</span>
             <strong id="currentDate"></strong>
         </div>
     </section>
 
+
+    <!-- STATS -->
+
     <section class="stats-grid">
+
         <div class="stat-card">
             <div class="stat-icon purple">📋</div>
             <div>
@@ -73,31 +79,49 @@
                 <strong id="progressPercent">0%</strong>
             </div>
         </div>
+
     </section>
 
+
+    <!-- OVERALL PROGRESS -->
+
     <section class="dashboard-grid">
+
         <div class="panel progress-panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">📊</span>
                     <h3>Overall Progress</h3>
                 </div>
+
                 <strong id="progressLabel">0%</strong>
+
             </div>
 
             <div class="progress-track">
                 <div id="overallProgress" class="progress-fill"></div>
             </div>
 
-            <p id="progressMessage">Add your first task to get started.</p>
+            <p id="progressMessage">
+                Add your first task to get started.
+            </p>
+
         </div>
 
+
+        <!-- STREAK -->
+
         <div class="panel streak-panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">🔥</span>
                     <h3>Study Streak</h3>
                 </div>
+
             </div>
 
             <div class="streak-number">
@@ -105,30 +129,50 @@
                 <span>days</span>
             </div>
 
-            <p id="streakMessage">Complete a task today to start your streak.</p>
+            <p id="streakMessage">
+                Complete a task today to start your streak.
+            </p>
+
         </div>
+
     </section>
 
+
+    <!-- SUBJECT PROGRESS -->
+
     <section class="dashboard-grid">
+
         <div class="panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">📈</span>
                     <h3>Subject Progress</h3>
                 </div>
+
             </div>
 
             <div id="subjectProgress">
-                <p class="empty-state">Add some tasks to see your subject progress.</p>
+                <p class="empty-state">
+                    Add some tasks to see your subject progress.
+                </p>
             </div>
+
         </div>
 
+
+        <!-- TODAY'S GOAL -->
+
         <div class="panel goal-panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">🎯</span>
                     <h3>Today's Goal</h3>
                 </div>
+
             </div>
 
             <div class="goal-count">
@@ -140,174 +184,459 @@
                 <div id="goalProgress" class="progress-fill goal-fill"></div>
             </div>
 
-            <p id="goalMessage">Complete 5 tasks today.</p>
+            <p id="goalMessage">
+                Complete 5 tasks today.
+            </p>
+
         </div>
+
     </section>
 
+
+    <!-- DEADLINES -->
+
     <section class="panel deadline-panel">
+
         <div class="panel-heading">
+
             <div>
                 <span class="section-icon">📅</span>
                 <h3>Upcoming Deadlines</h3>
             </div>
+
         </div>
 
         <div id="deadlines">
-            <p class="empty-state">No upcoming deadlines 🎉</p>
+            <p class="empty-state">
+                No upcoming deadlines 🎉
+            </p>
         </div>
+
     </section>
 
+
+    <!-- ADD TASK -->
+
     <section id="tasks" class="panel task-form-panel">
+
         <div class="section-title">
+
             <div>
+
                 <span class="section-icon">➕</span>
+
                 <div>
                     <h3>Add New Task</h3>
                     <p>Create a task and keep your study plan organized.</p>
                 </div>
+
             </div>
+
         </div>
+
 
         <form id="taskForm">
+
             <div class="form-group task-name">
-                <label for="taskName">Task Name</label>
-                <input id="taskName" type="text" placeholder="e.g. Complete Java assignment" required>
+
+                <label for="taskName">
+                    Task Name
+                </label>
+
+                <input
+                    id="taskName"
+                    type="text"
+                    placeholder="e.g. Complete Python assignment"
+                    required
+                >
+
             </div>
 
+
+            <!-- UPDATED SUBJECT LIST -->
+
             <div class="form-group">
-                <label for="subject">Subject</label>
+
+                <label for="subject">
+                    Subject
+                </label>
+
                 <select id="subject" required>
-                    <option value="">Select Subject</option>
-                    <option value="Java">Java</option>
-                    <option value="DSA">DSA</option>
-                    <option value="HTML/CSS/JS">HTML/CSS/JS</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Computer Networks">Computer Networks</option>
-                    <option value="Operating Systems">Operating Systems</option>
-                    <option value="Other">Other</option>
+
+                    <option value="">
+                        Select Subject
+                    </option>
+
+                    <option value="Mathematics">
+                        Mathematics
+                    </option>
+
+                    <option value="SE">
+                        Software Engineering (SE)
+                    </option>
+
+                    <option value="DBMS">
+                        DBMS
+                    </option>
+
+                    <option value="Python">
+                        Python
+                    </option>
+
+                    <option value="AI/ML">
+                        AI/ML
+                    </option>
+
+                    <option value="DS">
+                        Data Science (DS)
+                    </option>
+
                 </select>
+
             </div>
 
-            <div class="form-group">
-                <label for="deadline">Deadline</label>
-                <input id="deadline" type="date">
-            </div>
 
             <div class="form-group">
-                <label for="priority">Priority</label>
+
+                <label for="deadline">
+                    Deadline
+                </label>
+
+                <input
+                    id="deadline"
+                    type="date"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="priority">
+                    Priority
+                </label>
+
                 <select id="priority">
-                    <option value="Low">Low</option>
-                    <option value="Medium" selected>Medium</option>
-                    <option value="High">High</option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
                 </select>
+
             </div>
 
-            <button type="submit" class="primary-btn">＋ Add Task</button>
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                ＋ Add Task
+            </button>
+
         </form>
+
     </section>
+
+
+    <!-- FILTERS -->
 
     <section class="filter-bar">
+
         <div class="search-wrapper">
+
             <span>🔎</span>
-            <input id="searchInput" type="text" placeholder="Search tasks...">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search tasks..."
+            >
+
         </div>
 
+
+        <!-- UPDATED SUBJECT FILTER -->
+
         <select id="subjectFilter">
-            <option value="all">All Subjects</option>
-            <option value="Java">Java</option>
-            <option value="DSA">DSA</option>
-            <option value="HTML/CSS/JS">HTML/CSS/JS</option>
-            <option value="Mathematics">Mathematics</option>
-            <option value="Computer Networks">Computer Networks</option>
-            <option value="Operating Systems">Operating Systems</option>
-            <option value="Other">Other</option>
+
+            <option value="all">
+                All Subjects
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="SE">
+                Software Engineering (SE)
+            </option>
+
+            <option value="DBMS">
+                DBMS
+            </option>
+
+            <option value="Python">
+                Python
+            </option>
+
+            <option value="AI/ML">
+                AI/ML
+            </option>
+
+            <option value="DS">
+                Data Science (DS)
+            </option>
+
         </select>
 
+
         <select id="statusFilter">
-            <option value="all">All Tasks</option>
-            <option value="pending">Pending</option>
-            <option value="completed">Completed</option>
+
+            <option value="all">
+                All Tasks
+            </option>
+
+            <option value="pending">
+                Pending
+            </option>
+
+            <option value="completed">
+                Completed
+            </option>
+
         </select>
+
     </section>
+
+
+    <!-- TASK WORKSPACE -->
 
     <section class="workspace-grid">
 
+
+        <!-- MY TASKS -->
+
         <div id="tasks" class="panel tasks-panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">📝</span>
                     <h3>My Tasks</h3>
                 </div>
-                <span id="taskCountBadge" class="badge">0</span>
+
+                <span
+                    id="taskCountBadge"
+                    class="badge"
+                >
+                    0
+                </span>
+
             </div>
+
 
             <div id="taskList">
-                <p class="empty-state">No tasks found.</p>
+
+                <p class="empty-state">
+                    No tasks found.
+                </p>
+
             </div>
+
         </div>
 
+
+        <!-- FOCUS MODE -->
+
         <div id="focus" class="panel focus-panel">
+
             <div class="panel-heading">
+
                 <div>
                     <span class="section-icon">🎯</span>
                     <h3>Focus Mode</h3>
                 </div>
-                <span class="focus-status" id="focusStatus">Ready</span>
+
+                <span
+                    class="focus-status"
+                    id="focusStatus"
+                >
+                    Ready
+                </span>
+
             </div>
 
-            <p class="focus-description">Choose a task and start a focused study session.</p>
+
+            <p class="focus-description">
+                Choose a task and start a focused study session.
+            </p>
+
 
             <select id="focusTask">
-                <option value="">🎯 Select a task</option>
+
+                <option value="">
+                    🎯 Select a task
+                </option>
+
             </select>
 
+
             <div class="timer-mode">
-                <button id="focusModeBtn" class="active">Focus</button>
-                <button id="breakModeBtn">Break</button>
+
+                <button
+                    id="focusModeBtn"
+                    class="active"
+                >
+                    Focus
+                </button>
+
+                <button id="breakModeBtn">
+                    Break
+                </button>
+
             </div>
 
-            <div id="timerDisplay" class="timer">25:00</div>
+
+            <div
+                id="timerDisplay"
+                class="timer"
+            >
+                25:00
+            </div>
+
 
             <div class="timer-controls">
-                <button id="startTimer" class="primary-btn">▶ Start</button>
-                <button id="pauseTimer" class="pause-btn">Ⅱ Pause</button>
-                <button id="resetTimer" class="reset-btn">↻ Reset</button>
+
+                <button
+                    id="startTimer"
+                    class="primary-btn"
+                >
+                    ▶ Start
+                </button>
+
+                <button
+                    id="pauseTimer"
+                    class="pause-btn"
+                >
+                    Ⅱ Pause
+                </button>
+
+                <button
+                    id="resetTimer"
+                    class="reset-btn"
+                >
+                    ↻ Reset
+                </button>
+
             </div>
+
 
             <div class="session-info">
-                <span>🍅 Pomodoro sessions completed</span>
-                <strong id="pomodoroCount">0</strong>
+
+                <span>
+                    🍅 Pomodoro sessions completed
+                </span>
+
+                <strong id="pomodoroCount">
+                    0
+                </strong>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="music" class="panel music-panel">
+
+    <!-- MUSIC -->
+
+    <section
+        id="music"
+        class="panel music-panel"
+    >
+
         <div class="panel-heading">
+
             <div>
-                <span class="section-icon">🎧</span>
+
+                <span class="section-icon">
+                    🎧
+                </span>
+
                 <div>
-                    <h3>Study Music</h3>
-                    <p>Add Spotify or YouTube playlists for your study sessions.</p>
+
+                    <h3>
+                        Study Music
+                    </h3>
+
+                    <p>
+                        Add Spotify or YouTube playlists for your study sessions.
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
 
-        <form id="playlistForm" class="playlist-form">
-            <input id="playlistInput" type="url" placeholder="Paste Spotify or YouTube playlist link..." required>
-            <button type="submit" class="primary-btn">＋ Add Playlist</button>
+
+        <form
+            id="playlistForm"
+            class="playlist-form"
+        >
+
+            <input
+                id="playlistInput"
+                type="url"
+                placeholder="Paste Spotify or YouTube playlist link..."
+                required
+            >
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                ＋ Add Playlist
+            </button>
+
         </form>
 
-        <div id="playlistList" class="playlist-grid">
-            <p class="empty-state">No playlists added yet.</p>
+
+        <div
+            id="playlistList"
+            class="playlist-grid"
+        >
+
+            <p class="empty-state">
+                No playlists added yet.
+            </p>
+
         </div>
+
     </section>
 
 </main>
 
+
 <footer>
-    <p>StudyFlow • Built with HTML, CSS & JavaScript</p>
+
+    <p>
+        StudyFlow • Built with HTML, CSS & JavaScript
+    </p>
+
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
